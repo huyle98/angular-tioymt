@@ -1,0 +1,18 @@
+<h2><span>PRODUCTS</span></h2>
+
+<div *ngFor="let product of products">
+  <a
+    [title]="product.name + ' detail'"
+    [routerLink]="['/products',product.id ]"
+  >
+    <h4>{{ product.name }}</h4>
+  </a>
+
+  <p>
+    {{ product.description }}
+  </p>
+
+  <button (click)="share()">
+    Share
+  </button>
+</div>
